@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS图形hover效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #1a1c24;
+            padding: 100px 50px;
+        }
+        .container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .item {
+            width: 140px;
+            height: 140px;
+            box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        .item:hover::after {
+            content: "hover";
+            color: white;
+            font-size:24px;
+        }
+        .shape1 {
+            background: linear-gradient(135deg, #ff8855, #ff5566);
+        }
+        .shape2 {
+            background: linear-gradient(135deg, #32d888, #22d0bb);
+            border-radius: 16px;
+        }
+        .shape3 {
+            background: linear-gradient(135deg, #9c88aa, #6b5b88);
+            border-radius: 32px;
+        }
+        .shape4 {
+            background: linear-gradient(135deg, #ffdd77, #ffb870);
+            border-radius: 50%;
+        }
+        .shape5 {
+            background: linear-gradient(135deg, #587868, #486872);
+            border-radius: 12px;
+        }
+      .shape6 {
+    background: linear-gradient(135deg, #c2a8dc, #9a84bc);
+    border-radius: 50%;
+    filter: blur(1px);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item shape1"></div>
+        <div class="item shape2"></div>
+        <div class="item shape3"></div>
+        <div class="item shape4"></div>
+        <div class="item shape5"></div>
+        <div class="item shape6"></div>
+    </div>
+</body>
+</html>
